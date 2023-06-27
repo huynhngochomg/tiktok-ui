@@ -3,8 +3,12 @@
 
 :root {
     --primary: #ff3b5c;
+    --padding: 0 24px 0 24px;
+    --default-layout-header-height: 60px;
 }
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 html {
