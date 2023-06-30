@@ -22,81 +22,50 @@
 .logo {
 }
 
-.search,
-.search-result {
-    width: 500px;
-}
-
-.search-title {
-    padding: 5px 12px;
-    color: rgba(22, 24, 35, 0.5);
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 20px;
-}
-
-.search {
-    position: relative;
-    width: 500px;
-    height: var(--search-height);
-    background-color: #f1f1f2;
-    border-radius: var(--search-border-radius);
-    padding-left: 16px;
+// Action
+.action {
     display: flex;
-    border: 1.5px solid transparent;
-
-    input {
-        flex: 1;
-        height: 100%;
-        font-size: 1.6rem;
-        line-height: 22px;
-        background-color: transparent;
-        color: var(--black);
-        caret-color: var(--primary);
+    align-items: center;
+    justify-content: center;
+}
+.action-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 2.4rem;
+    margin: 0 0 0 16px;
+    background: none;
+    &:hover {
+        cursor: pointer;
     }
-
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: rgba(22, 24, 35, 1);
-    }
-
+}
+.notice-btn {
+    position: relative;
     &::after {
-        content: '';
+        content: '4';
         position: absolute;
-        height: calc(var(--search-height) - 18px);
-        width: 1px;
-        top: 9px;
-        right: var(--search-btn-width);
-        background-color: rgba(22, 24, 35, 0.34);
-    }
-    &:hover {
-        border-color: rgba(22, 24, 35, 0.2);
-    }
-    &:hover .search-btn {
-        cursor: pointer;
-        background-color: rgba(22, 24, 35, 0.06);
-        color: rgba(22, 24, 35, 1);
+        font-size: 1.4rem;
+        color: #fff;
+        top: -6px;
+        right: -5px;
+        min-width: 20px;
+        min-height: 20px;
+        border-radius: 50%;
+        background-color: var(--primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
     }
 }
-.clear,
-.loading {
-    position: absolute;
-    right: calc(var(--search-btn-width) + 16px);
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(22, 24, 35, 0.34);
-}
-.search-btn {
-    width: var(--search-btn-width);
-    height: 100%;
-    border-top-right-radius: var(--search-border-radius);
-    border-bottom-right-radius: var(--search-border-radius);
-    font-size: 2rem;
-    color: rgba(22, 24, 35, 0.34);
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0 0 0 16px;
+    object-fit: cover;
     &:hover {
         cursor: pointer;
-    }
-    &:active {
-        background-color: #f1f1f2;
     }
 }
 
@@ -105,4 +74,5 @@
     background-color: transparent;
     margin-left: 24px;
     padding: 4px 8px;
+    cursor: pointer;
 }
