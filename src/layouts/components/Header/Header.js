@@ -1,18 +1,20 @@
 
 import styles from './Header.module.scss'
 import classNames from 'classnames/bind';
-import images from '~/assets/images';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faEllipsisVertical, faLanguage, faGear, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { faCircleQuestion, faKeyboard, faMoon, faUser, faBookmark } from '@fortawesome/free-regular-svg-icons'
+import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 import Tippy from '@tippyjs/react';
+import { MessageIcon, UploadIcon } from '~/components/Icons';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
+import images from '~/assets/images';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
-import { faTiktok } from '@fortawesome/free-brands-svg-icons';
-import { MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
+import config from '~/config';
 
 
 
@@ -97,9 +99,9 @@ function Header() {
         <div className={cx('inner')}>
 
             {/* Logo */}
-            <div className={cx('logo')}>
-                <img src={images.logo} alt='Tiktok' />
-            </div>
+            <Link to={config.routes.home} className={cx('logo')}>
+                < img src={images.logo} alt='Tiktok' />
+            </Link>
 
             {/* Search */}
             <Search />

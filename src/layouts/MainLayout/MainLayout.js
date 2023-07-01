@@ -1,11 +1,12 @@
-import styles from './DefaultLayout.module.scss'
+import styles from './MainLayout.module.scss'
 import classNames from 'classnames/bind';
 import Header from "../components/Header";
 import Sidebar from "./Sidebar";
+import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles)
 
-function DefaultLayout({ children }) {
+function MainLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Header />
@@ -18,4 +19,8 @@ function DefaultLayout({ children }) {
     )
 }
 
-export default DefaultLayout;
+MainLayout.propTypes = {
+    children: PropTypes.node.isRequired
+}
+
+export default MainLayout;

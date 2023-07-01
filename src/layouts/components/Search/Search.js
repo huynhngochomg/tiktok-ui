@@ -7,7 +7,8 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { useDebounce } from '~/hooks';
-import request from '~/Utils/request';
+import request from '~/utils/httpRequest';
+import { Link } from 'react-router-dom';
 
 
 
@@ -16,15 +17,15 @@ const cx = classNames.bind(styles)
 
 function Search() {
     const inputRef = useRef()
-    const [showResult, setShowResult] = useState(true)
+    const [showResult, setShowResult] = useState(false)
     const [searchValue, setSearchValue] = useState('')
     const [searchResult, setSearchResult] = useState([])
     const [loading, setLoading] = useState(false)
 
-    const debounced = useDebounce(searchValue, 500)
+    const debouncedValue = useDebounce(searchValue, 500)
 
     useEffect(() => {
-        if (!debounced.trim()) {
+        if (!debouncedValue.trim()) {
             return
         }
 
@@ -34,7 +35,7 @@ function Search() {
         request
             .get(`/users/search`, {
                 params: {
-                    q: debounced,
+                    q: debouncedValue,
                     type: 'less',
                 }
             })
@@ -45,7 +46,7 @@ function Search() {
             .catch(() => {
                 setLoading(false)
             })
-    }, [debounced])
+    }, [debouncedValue])
 
     const handleClear = () => {
         setSearchValue('');
@@ -53,30 +54,35 @@ function Search() {
         inputRef.current.focus();
     }
 
-    const handleHideResult = () => {
-        setShowResult(false);
-    }
     const handleSpaceInput = (e) => {
         if (!e.target.value.startsWith(' ')) {
             setSearchValue(e.target.value);
         }
     }
 
+    const handleHideResult = () => {
+        setShowResult(false);
+    }
+
+    const handleShowResult = attrs => (
+        <div className={cx('search-result')} tabIndex='-1' {...attrs}>
+            <PopperWrapper>
+                <h4 className={cx('search-title')}>Account</h4>
+                {searchResult.map((result) => (
+                    <AccountItem key={result.id} data={result} />
+                ))}
+                <Link className={cx('search-value')}>View all results for "{searchValue}"</Link>
+            </PopperWrapper>
+        </div>
+    )
+
     return (
         <HeadlessTippy
+            appendTo={() => document.body}
             interactive
             visible={showResult && searchResult.length > 0 && searchValue}
             onClickOutside={handleHideResult}
-            render={attrs => (
-                <div className={cx('search-result')} tabIndex='-1' {...attrs}>
-                    <PopperWrapper>
-                        <h4 className={cx('search-title')}>Account</h4>
-                        {searchResult.map((result) => (
-                            <AccountItem key={result.id} data={result} />
-                        ))}
-                    </PopperWrapper>
-                </div>
-            )}>
+            render={handleShowResult}>
             <div className={cx('search')}>
                 <input
                     ref={inputRef}
