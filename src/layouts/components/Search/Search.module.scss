@@ -43,7 +43,7 @@
         line-height: 22px;
         padding-right: 40px;
         background-color: transparent;
-        color: var(--black);
+        color: var(--text-color);
         caret-color: var(--primary);
     }
 
@@ -103,5 +103,12 @@
     }
     &:active {
         background-color: #f1f1f2;
+    }
+}
+
+//Responsive
+@media screen and (max-width: 768px) {
+    .search {
+        display: none;
     }
 }

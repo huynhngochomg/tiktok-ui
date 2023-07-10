@@ -5,14 +5,27 @@
 }
 
 .container {
-    width: 100%;
-    padding: var(--padding);
     display: flex;
+    justify-content: space-between;
+    width: var(--layout-width);
     margin-top: var(--default-layout-header-height);
+}
+.sidebar {
+    flex-shrink: 0;
+    width: 232px;
 }
 
 .content {
-    flex: 1;
-    min-height: 1000px;
-    //background-color: red;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+//Responsive
+@media screen and (max-width: 1072px) {
+    .sidebar {
+        width: 72px;
+        border-right: 1px solid rgba(22, 24, 35, 0.12);
+        box-shadow: 1px 1px 1px rgba(22, 24, 35, 0.03);
+    }
 }

@@ -1,4 +1,4 @@
-import { Wrapper as PopperWrapper } from '~/components/Popper';
+import Popper from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { faCircleXmark, faSpinner, faMagnifyingGlass, } from '@fortawesome/free-solid-svg-icons';
@@ -7,7 +7,7 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
 import { useDebounce } from '~/hooks';
-import request from '~/utils/httpRequest';
+import * as searchService from '~/services/searchService'
 import { Link } from 'react-router-dom';
 
 
@@ -29,23 +29,14 @@ function Search() {
             return
         }
 
-        setLoading(true)
+        const fetchApi = async () => {
+            setLoading(true)
+            const result = await searchService.search(debouncedValue);
+            setSearchResult(result)
+            setLoading(false)
+        }
 
-        // Call API
-        request
-            .get(`/users/search`, {
-                params: {
-                    q: debouncedValue,
-                    type: 'less',
-                }
-            })
-            .then(res => {
-                setSearchResult(res.data.data)
-                setLoading(false)
-            })
-            .catch(() => {
-                setLoading(false)
-            })
+        fetchApi()
     }, [debouncedValue])
 
     const handleClear = () => {
@@ -66,13 +57,13 @@ function Search() {
 
     const handleShowResult = attrs => (
         <div className={cx('search-result')} tabIndex='-1' {...attrs}>
-            <PopperWrapper>
+            <Popper>
                 <h4 className={cx('search-title')}>Account</h4>
                 {searchResult.map((result) => (
-                    <AccountItem key={result.id} data={result} />
+                    <AccountItem key={result.id} data={result} state={result} />
                 ))}
-                <Link className={cx('search-value')}>View all results for "{searchValue}"</Link>
-            </PopperWrapper>
+                <Link to='/' className={cx('search-value')}>View all results for "{searchValue}"</Link>
+            </Popper>
         </div>
     )
 

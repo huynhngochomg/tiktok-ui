@@ -4,9 +4,8 @@
     align-items: center;
     font-family: var(--font-family);
     font-size: 16px;
-    font-weight: 600;
     min-width: 100px;
-    padding: 8px 16px;
+    padding: 0px 12px;
     border-radius: 4px;
     background-color: var(--white);
     border: 1px solid transparent;
@@ -32,23 +31,12 @@
 }
 
 //Button type
-.rounded {
-    color: rgba(22, 24, 35, 0.7);
-    border-color: rgba(22, 24, 35, 0.12);
-    box-shadow: 0 0 1px rgba(22, 24, 35, 0.12);
-    border-radius: 100px;
-
-    &:hover {
-        cursor: pointer;
-        border-color: rgba(22, 24, 35, 0.2);
-        background-color: rgba(22, 24, 35, 0.03);
-    }
-}
-
 .primary {
+    height: var(--height-button);
     background-color: var(--primary);
     color: var(--white);
     border-color: var(--primary);
+    font-weight: 600;
     &:hover {
         border-color: var(--primary);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
@@ -57,8 +45,10 @@
 }
 
 .outline {
+    height: var(--height-button);
     color: var(--primary);
     border-color: currentColor;
+    font-weight: 600;
     &:hover {
         border-color: currentColor;
         background-color: rgba(254, 44, 85, 0.06);
@@ -67,21 +57,27 @@
 }
 
 //Button type
+.medium {
+    height: 36px;
+    min-width: 96px;
+}
 
 .small {
-    padding: 4px 16px;
+    height: 32px;
     min-width: 88px;
 }
 
 .large {
-    padding: 14px 16px;
-    min-width: 148px;
+    height: 48px;
+    min-width: 212px;
 }
 
 .text {
-    padding: 8px 12px;
+    height: var(--height-button);
     border-color: rgba(22, 24, 35, 0.12);
     color: rgba(22, 24, 35, 1);
+    font-weight: 600;
+    border-radius: unset;
     &:hover {
         cursor: pointer;
         background-color: rgba(22, 24, 35, 0.03);

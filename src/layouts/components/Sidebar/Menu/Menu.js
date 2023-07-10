@@ -5,7 +5,6 @@ function Menu({ children }) {
         <nav>
             {children}
         </nav>
-
     );
 }
 
