@@ -13,7 +13,7 @@ function Following() {
     const [page, setPage] = useState(1)
     const [volume, setVolume] = useState(0.4)
     const [prevVolume, setPrevVolume] = useState(volume)
-    const [mute, setMute] = useState(true)
+    const [mute, setMute] = useState(false)
 
     useEffect(() => {
         const fetchAPI = async () => {

@@ -19,7 +19,7 @@ import { ModalContext } from "~/components/ModalProvider";
 const cx = classNames.bind(styles)
 
 function Video({ data, mute, volume, adjustVolume, toggleMuted }) {
-    const [isPlaying, setIsPlaying] = useState(false)
+    const [isPlaying, setIsPlaying] = useState(true)
 
     const videoRef = useRef()
     const context = useContext(ModalContext);

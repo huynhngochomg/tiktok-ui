@@ -1,4 +1,6 @@
-.search,
+.search {
+}
+
 .search-result {
     width: 500px;
 }
@@ -26,9 +28,7 @@
 
 .search {
     position: relative;
-    width: 500px;
     height: var(--search-height);
-
     background-color: #f1f1f2;
     border-radius: var(--search-border-radius);
     padding-left: 16px;
@@ -107,8 +107,21 @@
 }
 
 //Responsive
-@media screen and (max-width: 768px) {
+@media (860px <= width <= 1000px) {
+    .search-result {
+        width: 380px;
+    }
+}
+@media (770px <= width <= 859px) {
+    .search-result {
+        width: 320px;
+    }
+}
+@media (max-width: 768px) {
     .search {
+        display: none;
+    }
+    .search-result {
         display: none;
     }
 }

@@ -150,7 +150,7 @@ function Header() {
             </Link>
 
             {/* Search */}
-            <Search />
+            <div className={cx('search-container')}><Search /></div>
 
             {/* Action Account */}
             <div className={cx('action')}>
@@ -160,12 +160,12 @@ function Header() {
                             Upload
                         </Button>
                         <Tippy delay={[0, 100]} content="Messages" placement='bottom'>
-                            <button className={cx('action-btn')} onClick={context.handleShowModal}>
+                            <button className={cx('action-btn', 'message-btn')} onClick={context.handleShowModal}>
                                 <UploadIcon />
                             </button>
                         </Tippy>
                         <Tippy delay={[0, 100]} content="Inbox" placement='bottom'>
-                            <button className={cx('action-btn', 'notice-btn')} onClick={context.handleShowModal}>
+                            <button className={cx('action-btn', 'inbox-btn')} onClick={context.handleShowModal}>
                                 <MessageIcon />
                             </button>
                         </Tippy>
