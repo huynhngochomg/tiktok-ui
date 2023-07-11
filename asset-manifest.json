@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tiktok-ui/static/css/main.34c74c8f.css",
+    "main.css": "/tiktok-ui/static/css/main.e60df31c.css",
     "main.js": "/tiktok-ui/static/js/main.e009cdb8.js",
     "static/js/787.4c9d15e8.chunk.js": "/tiktok-ui/static/js/787.4c9d15e8.chunk.js",
     "static/media/LINE.svg": "/tiktok-ui/static/media/LINE.51494eb5ada619d6d418318a018d2c7b.svg",
@@ -16,12 +16,12 @@
     "static/media/facebook.svg": "/tiktok-ui/static/media/facebook.e100276c5fa1b6da0634e4805a8b6db2.svg",
     "static/media/apple.svg": "/tiktok-ui/static/media/apple.49b06e56eeb02105bc46e4a7917bc16e.svg",
     "index.html": "/tiktok-ui/index.html",
-    "main.34c74c8f.css.map": "/tiktok-ui/static/css/main.34c74c8f.css.map",
+    "main.e60df31c.css.map": "/tiktok-ui/static/css/main.e60df31c.css.map",
     "main.e009cdb8.js.map": "/tiktok-ui/static/js/main.e009cdb8.js.map",
     "787.4c9d15e8.chunk.js.map": "/tiktok-ui/static/js/787.4c9d15e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34c74c8f.css",
+    "static/css/main.e60df31c.css",
     "static/js/main.e009cdb8.js"
   ]
 }
