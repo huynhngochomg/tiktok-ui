@@ -23,6 +23,9 @@ body {
     --background-gray-color-75: rgba(22, 24, 35, 0.75);
     --background-gray-color-241: rgb(241, 241, 241);
     --background-gray-color-248: rgb(248, 248, 248);
+    --background-tippy-content: #616161;
+    --background-modal-form-color: #fff;
+    --background-modal-item-color: #fff;
     --box-shadow-popper: rgba(0, 0, 0, 0.12) 0px 2px 12px;
     --box-shadow-popper-2: rgba(0, 0, 0, 0.12) 0px 4px 16px;
     --box-shadow-header: 0px 1px 1px rgba(0, 0, 0, 0.12);
@@ -46,6 +49,9 @@ body.dark {
     --background-gray-color-75: hsla(0, 0%, 100%, 0.75);
     --background-gray-color-241: rgb(37, 37, 37);
     --background-gray-color-248: rgb(18, 18, 18);
+    --background-tippy-content: #4e4e4e;
+    --background-modal-form-color: rgb(37, 37, 37);
+    --background-modal-item-color: rgb(46, 46, 46);
     --box-shadow-header: rgba(255, 255, 255, 0.12) 0px 1px 1px;
     --box-shadow-popper: rgba(255, 255, 255, 0.12) 0px 2px 12px;
     --border-color-style: transparent;

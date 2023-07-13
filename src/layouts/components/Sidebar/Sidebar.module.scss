@@ -7,7 +7,7 @@
     top: var(--default-layout-header-height);
     width: inherit;
     background-color: var(--color-background);
-    z-index: 9999;
+    z-index: 9997;
     overflow-y: auto;
     padding: 20px 0 26px 8px;
     &:not(:hover)::-webkit-scrollbar-thumb {

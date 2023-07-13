@@ -6,12 +6,12 @@ import { faPlus, faEllipsisVertical, faLanguage, faGear, faArrowRightToBracket }
 import { faCircleQuestion, faKeyboard, faMoon, faUser, faBookmark } from '@fortawesome/free-regular-svg-icons'
 import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 import Tippy from '@tippyjs/react';
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import 'tippy.js/dist/tippy.css';
 import { Link } from 'react-router-dom';
 
 import { MessageIcon, UploadIcon } from '~/components/Icons';
-import images from '~/assets/images';
+//import images from '~/assets/images';
 import Button from '~/components/Button';
 import Menu from '~/components/Menu';
 import Image from '~/components/Image';
@@ -23,7 +23,6 @@ import { ModalContext } from '~/components/ModalProvider'
 const cx = classNames.bind(styles)
 
 function Header() {
-    const [isDark, setIsDark] = useState(true)
 
     // Menu item
     const MENU_ITEM = [
@@ -173,7 +172,11 @@ function Header() {
                         <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />} onClick={context.handleShowModal}>
                             Upload
                         </Button>
-                        <Tippy delay={[0, 100]} content="Messages" placement='bottom'>
+                        <Tippy
+                            delay={[0, 100]}
+                            content="Messages"
+                            placement='bottom'
+                        >
                             <button className={cx('action-btn', 'message-btn')} onClick={context.handleShowModal}>
                                 <UploadIcon />
                             </button>

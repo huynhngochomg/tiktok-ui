@@ -29,7 +29,8 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
-    color: var(--color-foreground);
+    //color: var(--color-foreground);
+    //background-color: var(--color-background);
     overflow-y: overlay;
     -webkit-font-smoothing: antialiased;
 }
@@ -69,12 +70,13 @@ body {
         font-weight: 600;
         font-size: 1.7rem;
         line-height: 1rem;
-        background-color: var(--color-background);
-        color: var(--color-foreground);
+        background-color: var(--background-tippy-content);
+        color: #fff;
         padding: 8px 0;
+        z-index: 2;
     }
     .tippy-arrow {
-        color: var(--color-foreground);
+        color: var(--background-tippy-content);
     }
 }
 

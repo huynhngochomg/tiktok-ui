@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99999999;
+    z-index: 9998;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -47,11 +47,12 @@
     height: 32px;
     font-size: 2.4rem;
     margin: 0 0 0 16px;
-    background: none;
+    background-color: var(--color-background);
     &:hover {
         cursor: pointer;
     }
 }
+
 .message-btn {
     position: relative;
     &::after {
