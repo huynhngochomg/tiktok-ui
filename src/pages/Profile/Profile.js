@@ -41,13 +41,13 @@ function Profile() {
 
     const handleClickVideo = () => {
         setActive(false)
-        elementVideo.style.color = "rgb(22, 24, 35)";
-        elementLiked.style.color = "rgb(115, 116, 123)";
+        elementVideo.classList.add(cx('dark'))
+        elementLiked.classList.remove(cx('light'))
     }
     const handleClickLiked = () => {
         setActive(true)
-        elementLiked.style.color = "rgb(22, 24, 35)";
-        elementVideo.style.color = "rgb(115, 116, 123)";
+        elementLiked.classList.add(cx('light'))
+        elementVideo.classList.remove(cx('dark'))
     }
 
     useEffect(() => {
@@ -133,6 +133,7 @@ function Profile() {
                     <div className={cx('liked-tab')} onMouseOver={handleMoveToRight} onMouseUp={handleClickLiked}><span><LockSolidIcon /> Liked</span></div>
                     <div className={cx('underline')}></div>
                 </div>
+
                 {!active && videos.length > 0 && <div className={cx('videos')}>
                     {videos.map((video, key) =>
                         <VideoPreview data={video} key={key} />
@@ -151,8 +152,7 @@ function Profile() {
                     <LockIcon />
                     <h4>This user's liked videos are private</h4>
                     <p>Videos liked by {data.nickname} are currently hidden</p>
-                </div>
-                }
+                </div>}
             </div>
         </div >
     )

@@ -1,6 +1,6 @@
 
 const images = {
-    logo: require('~/assets/images/tiktok.svg').default,
+    tiktok: require('~/assets/images/tiktok.svg').default,
     noImage: require('~/assets/images/noImage.png'),
     facebook: require('~/assets/images/facebook.svg').default,
     google: require('~/assets/images/google.svg').default,

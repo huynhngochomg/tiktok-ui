@@ -8,7 +8,7 @@
     border-radius: 4px;
     transition: background-color ease-in-out 200ms;
     &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
+        background-color: var(--background-gray-color-03);
     }
     &.active {
         color: var(--primary);

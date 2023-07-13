@@ -13,23 +13,24 @@
 }
 
 .menu-body {
+    position: relative;
     overflow-y: auto;
 }
 
 //Menu items
 .menu-item {
     border-radius: 0;
-    padding: 11px 16px;
+    padding: 10px 8px 10px 16px;
     justify-content: flex-start;
     width: 100%;
     line-height: 18px;
     font-weight: 600;
     &:hover {
         cursor: pointer;
-        background-color: rgba(22, 24, 35, 0.03);
+        background-color: var(--background-gray-color-03);
     }
     &.separate {
-        border-top: 1px solid rgba(22, 24, 35, 0.12);
+        border-top: 1px solid var(--background-gray-color-12);
     }
 }
 

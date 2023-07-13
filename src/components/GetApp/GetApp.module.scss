@@ -21,7 +21,7 @@
     position: relative;
     right: 0;
     bottom: 0;
-    color: rgba(22, 24, 35, 0.75);
+    color: var(--text-gray-color);
     border: 1px solid rgba(22, 24, 35, 0.12);
     box-shadow: 0 0 1px rgba(22, 24, 35, 0.12);
     border-radius: 100px;
@@ -29,7 +29,7 @@
     font-weight: 700;
     height: 32px;
     font-size: 14px;
-    background-color: #fff;
+    background-color: var(--white-color-3);
 
     &:hover {
         cursor: pointer;
@@ -75,6 +75,8 @@
         flex-direction: row;
         padding: 6px;
         border-radius: 8px;
+        color: var(--color-foreground);
+        background-color: var(--color-background);
         cursor: pointer;
         .icon {
             margin-right: 8px;
@@ -85,7 +87,7 @@
         }
 
         &:hover {
-            background: rgba(22, 24, 35, 0.03);
+            background: var(--background-gray-color-03);
         }
     }
 

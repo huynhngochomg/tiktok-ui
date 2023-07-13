@@ -331,7 +331,7 @@ export const ShareIcon = ({ className, width = '2.4rem', height = '2.4rem' }) =>
     >
         <path
             d="M12.5546 8.35111L13.3171 8.16468V7.37972V3.50006L21.4998 12.0001L13.3171 20.5001V16.3738V15.3664L12.3098 15.3738C8.838 15.3994 5.4275 17.0466 2.49983 19.5882C2.54612 19.2536 2.67769 18.641 2.94391 17.8329C3.3786 16.5132 4.01326 15.1988 4.88691 13.971C6.71045 11.4083 9.24414 9.16046 12.5546 8.35111Z"
-            stroke="#161823"
+            stroke="currentColor"
             strokeWidth="2"
         ></path>
     </svg>
@@ -436,14 +436,14 @@ export const BanIcon = ({ className, width = '1.6rem', height = '1.6rem' }) => (
         width={width}
         height={height}
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
+        fill="currentColor"
         viewBox="0 0 16 16"
     >
         <path
-            fill="black"
+            fill="currentColor"
             fillRule="evenodd"
             clipRule="evenodd"
-            stroke="black"
+            stroke="currentColor"
             strokeWidth="0.75"
             d="M4.48 3.994l7.526 7.527A5.333 5.333 0 004.48 3.994zm7.056 8l-7.53-7.53a5.333 5.333 0 007.529 7.529zM3.765 3.75a6 6 0 118.47 8.5 6 6 0 01-8.47-8.5z"
         ></path>
@@ -544,11 +544,11 @@ export const PCIcon = ({ className, width = '2.1rem', height = '2.1rem' }) => (
         width={width}
         height={height}
         viewBox="0 0 21 19"
+        fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
-        fill="none"
     >
         <path
-            fill="#161823"
+            fill="cu"
             d="M12.601 17h2.52a.84.84 0 110 1.68h-9.24a.84.84 0 110-1.68h2.1v-2.1h-6.3A1.682 1.682 0 010 13.22V1.88C0 .952.754.199 1.68.199h17.642c.927 0 1.68.753 1.68 1.68V13.22c0 .927-.753 1.68-1.68 1.68h-6.72V17zm-.84 0v-2.1h-2.94V17h2.94zM1.681 1.88v11.34h17.641V1.88H1.68z"
         ></path>
     </svg>
@@ -578,7 +578,6 @@ export const LockSolidIcon = ({ className, width = '1.8rem', height = '1.8rem' }
         viewBox="0 0 48 48"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
-    //style="transform: translateY(2px);"
     >
         <path fillRule="evenodd" clipRule="evenodd" d="M24 3C17.9249 3 13 7.92487 13 14V21H8C6.89543 21 6 21.8954 6 23V41C6 42.1046 6.89543 43 8 43H40C41.1046 43 42 42.1046 42 41V23C42 21.8954 41.1046 21 40 21H35V14C35 7.92487 30.0751 3 24 3ZM31 21V14C31 10.134 27.866 7 24 7C20.134 7 17 10.134 17 14V21H31Z"></path></svg>
 )
@@ -590,7 +589,6 @@ export const LockIcon = ({ className, width = '9rem', height = '9rem' }) => (
         viewBox="0 0 48 48"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
-    //style="fill-opacity: 0.34;"
     >
         <path fillRule="evenodd" clipRule="evenodd" d="M24 8.5C20.9624 8.5 18.5 10.9624 18.5 14V18.5H29.5V14C29.5 10.9624 27.0376 8.5 24 8.5ZM32.5 18.5V14C32.5 9.30558 28.6944 5.5 24 5.5C19.3056 5.5 15.5 9.30558 15.5 14V18.5H11C9.61929 18.5 8.5 19.6193 8.5 21V40C8.5 41.3807 9.61929 42.5 11 42.5H37C38.3807 42.5 39.5 41.3807 39.5 40V21C39.5 19.6193 38.3807 18.5 37 18.5H32.5ZM11.5 21.5V39.5H36.5V21.5H11.5Z"></path></svg>
 )

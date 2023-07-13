@@ -2,6 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./Button.module.scss";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
+import { DarkModeToggle } from '~/components/DarkModeToggle/DarkModeToggle'
 
 const cx = classNames.bind(styles)
 
@@ -18,6 +19,7 @@ function Button({
     disabled = false,
     leftIcon,
     rightIcon,
+    mode,
     to,
     onClick,
     href,
@@ -51,8 +53,12 @@ function Button({
     return <Comp className={classes} {...props}>
         {leftIcon && <span className={cx('icon')}>{leftIcon} </span>}
         <span className={cx('title')}>{children}</span>
-        {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
 
+        {mode && <span className={cx('mode')}>
+            <DarkModeToggle />
+        </span>}
+
+        {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
     </Comp>
 }
 
@@ -69,6 +75,7 @@ Button.propTypes = {
     disabled: PropTypes.bool,
     leftIcon: PropTypes.node,
     rightIcon: PropTypes.node,
+    mode: PropTypes.bool,
     to: PropTypes.string,
     onClick: PropTypes.func,
     href: PropTypes.string,

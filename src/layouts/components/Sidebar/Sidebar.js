@@ -56,7 +56,7 @@ function Sidebar() {
                         {accounts.map((account) => (
                             <SuggestedAccounts data={account} key={account.id} />
                         ))}
-                        {seeAll ? <div className={cx('see-all')} onClick={() => setSeeAll(false)}>See all</div> : <div className={cx('see-all')} onClick={() => setSeeAll(true)}>See less</div>}
+                        {seeAll ? <div className={cx('see-all')} onClick={() => setSeeAll(false)}>See more</div> : <div className={cx('see-all')} onClick={() => setSeeAll(true)}>See less</div>}
                     </div>
                 ) : (
                     <div className={cx('login-container')}>
