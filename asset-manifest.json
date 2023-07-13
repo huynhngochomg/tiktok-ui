@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/tiktok-ui/static/css/main.e60df31c.css",
-    "main.js": "/tiktok-ui/static/js/main.e009cdb8.js",
+    "main.css": "/tiktok-ui/static/css/main.f55fc4e5.css",
+    "main.js": "/tiktok-ui/static/js/main.23d00e47.js",
     "static/js/787.4c9d15e8.chunk.js": "/tiktok-ui/static/js/787.4c9d15e8.chunk.js",
     "static/media/LINE.svg": "/tiktok-ui/static/media/LINE.51494eb5ada619d6d418318a018d2c7b.svg",
     "static/media/instagram.svg": "/tiktok-ui/static/media/instagram.54dd491455a206fdfc3468a95a471090.svg",
-    "static/media/tiktok.svg": "/tiktok-ui/static/media/tiktok.47a97122cc053264d47c36f081b485d2.svg",
+    "static/media/tiktok.svg": "/tiktok-ui/static/media/tiktok.748938c07e0f2c0e5c89d9f0c6f7e1d1.svg",
     "static/media/kakaotalk.svg": "/tiktok-ui/static/media/kakaotalk.28010f1c39dee2169d35c22f77cf66e8.svg",
     "static/media/linkedin.svg": "/tiktok-ui/static/media/linkedin.ba1e28fce95752c54a8574ac778385d2.svg",
     "static/media/whatsapp.svg": "/tiktok-ui/static/media/whatsapp.8668f749c24db992cd503e8b0ea8e619.svg",
@@ -16,12 +16,12 @@
     "static/media/facebook.svg": "/tiktok-ui/static/media/facebook.e100276c5fa1b6da0634e4805a8b6db2.svg",
     "static/media/apple.svg": "/tiktok-ui/static/media/apple.49b06e56eeb02105bc46e4a7917bc16e.svg",
     "index.html": "/tiktok-ui/index.html",
-    "main.e60df31c.css.map": "/tiktok-ui/static/css/main.e60df31c.css.map",
-    "main.e009cdb8.js.map": "/tiktok-ui/static/js/main.e009cdb8.js.map",
+    "main.f55fc4e5.css.map": "/tiktok-ui/static/css/main.f55fc4e5.css.map",
+    "main.23d00e47.js.map": "/tiktok-ui/static/js/main.23d00e47.js.map",
     "787.4c9d15e8.chunk.js.map": "/tiktok-ui/static/js/787.4c9d15e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e60df31c.css",
-    "static/js/main.e009cdb8.js"
+    "static/css/main.f55fc4e5.css",
+    "static/js/main.23d00e47.js"
   ]
 }
