@@ -169,14 +169,10 @@ function Header() {
             <div className={cx('action')}>
                 {currentUser ? (
                     <>
-                        <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />} onClick={context.handleShowModal}>
+                        <Button className={cx('upload-btn')} text leftIcon={<FontAwesomeIcon icon={faPlus} />} onClick={context.handleShowModal}>
                             Upload
                         </Button>
-                        <Tippy
-                            delay={[0, 100]}
-                            content="Messages"
-                            placement='bottom'
-                        >
+                        <Tippy delay={[0, 100]} content="Messages" placement='bottom'>
                             <button className={cx('action-btn', 'message-btn')} onClick={context.handleShowModal}>
                                 <UploadIcon />
                             </button>
